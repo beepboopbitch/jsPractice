@@ -11,12 +11,37 @@
     <title>jsPractice</title>
   </head>
   <body>
-    <form id="sen" class="jumbotron">
-      <label for="sentence">Enter a sentence to count vowels.</label>
-      <input type="text" id ="sentence">
-      <button type="submit" name="button">click to submit</button>
-    </form>
-    <p class="outputSentence">There are <span class="answer"></span> vowels</p>
+    <div class="container">
+      <h1>Javascript Practice:</h1>
+      <div class="jumbotron">
+        <h1 class="display-1">Vowel Counter</h1>
+        <form id="sen">
+          <label for="sentence">Enter a sentence to count vowels.</label>
+          <input type="text" id= "sentence">
+          <button type="submit" name="button">click to submit</button>
+          <p class="hideMe" id="outputSentence">There are <span class="answer"></span> vowels</p>
+        </form>
+      </div>
 
+      <div class="jumbotron">
+        <h1 class="display-1">Leap Year Identifier</h1>
+        <form id="leapForm">
+          <label for="yearInput">Enter a year: </label>
+          <input type="text" id= "yearInput">
+          <button type="submit" name="button">click to submit</button>
+          <p class="hideMe" id="yearOutput">It is <strong><span class="yearDetermination"></span></strong>a leap year</p>
+        </form>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-1">Pig Latin Translator</h1>
+        <form id="pigForm">
+          <label for="pigInput">Enter a sentence to translate into pigLatin: </label>
+          <input type="text" id= "pigInput">
+          <button type="submit" name="button">click to submit</button>
+          <p class="hideMe" id="pigOutput"></p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
