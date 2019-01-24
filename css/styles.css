@@ -3,4 +3,9 @@
 }
 body{
   background-color: green;
+  text-align: center;
+}
+#main{
+  font-size: 90px;
+  color: white;
 }

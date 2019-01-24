@@ -47,7 +47,49 @@ function pigLatinizer(sentence){
     });
     return pigLatinArray.join(" ");
 }
-console.log(pigLatinizer("question, The bookshelf is a book treasure?"));
+
+function translator(num,char,spChar,xSpChar){
+  if (num==0){
+    return "";
+  } else if(num==1){
+    return char;
+  } else if(num==2){
+    return char+char;
+  } else if(num==3){
+    return char+char+char;
+  } else if(num==4){
+    return char+spChar;
+  } else if(num==5){
+    return spChar;
+  } else if (num==6){
+    return spChar+char;
+  } else if (num==7){
+    return spChar+char+char;
+  } else if (num==8){
+    return spChar+char+char+char;
+  } else if (num==9){
+    return spChar+xSpChar;
+  }
+}
+
+function romanizer(number){
+  if (parseInt(number)<4000){
+    var romanNumeralOutput="";
+    var numArray=number.split("");
+    for (var i=0;numArray.length<4;i++){
+      numArray.unshift("0")
+    }
+    romanNumeralOutput += translator(numArray[0],"M","Y","Z");
+    romanNumeralOutput += translator(numArray[1],"C","D","M");
+    romanNumeralOutput += translator(numArray[2],"X","L","C");
+    romanNumeralOutput += translator(numArray[3],"I","V","X");
+    return romanNumeralOutput;
+  } else {
+    alert("Alert! Roman Numerals don't go past 3999!");
+  }
+}
+
+console.log(romanizer("3500"));
 
 $(document).ready(function(){
   $("form#sen").submit(function(event){
@@ -73,6 +115,11 @@ $(document).ready(function(){
     var userInput = $("input#pigInput").val();
     var pigLatinTranslation = pigLatinizer(userInput);
     $("p#pigOutput").text(pigLatinTranslation).show();
-
   });
+  $("form#romeForm").submit(function(event){
+    event.preventDefault();
+    var userInput = $("input#romeInput").val();
+    var outputSentence = romanizer(userInput);
+    $("p#romeOutput").text(outputSentence).show();
+  })
 });
