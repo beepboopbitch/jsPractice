@@ -68,7 +68,7 @@ function translator(num,char,spChar,xSpChar){
   } else if (num==8){
     return spChar+char+char+char;
   } else if (num==9){
-    return spChar+xSpChar;
+    return char+xSpChar;
   }
 }
 
