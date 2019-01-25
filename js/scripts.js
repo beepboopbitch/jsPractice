@@ -89,7 +89,19 @@ function romanizer(number){
   }
 }
 
-console.log(romanizer("3500"));
+// function encrypter(sentence){
+//   var sentArray=sentence.split("");
+//   var noSpaces=sentArray.forEach(function(item){
+//     console.log(item);
+//   })
+//   var sL=sentence.length;
+//   var size= Math.ceil(Math.sqrt(sL);
+//   for (var i=0; i<size;i++){
+//     for(var i=0;i<size;i++){
+//
+//     }
+//   }
+// }
 
 $(document).ready(function(){
   $("form#sen").submit(function(event){
